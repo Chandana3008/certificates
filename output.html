@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html lang="en" dir="ltr"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:article="http://ogp.me/ns/article#"
+  xmlns:book="http://ogp.me/ns/book#"
+  xmlns:profile="http://ogp.me/ns/profile#"
+  xmlns:video="http://ogp.me/ns/video#"
+  xmlns:product="http://ogp.me/ns/product#"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"> 
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager --> 
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W4FZMR');
+</script>
+<!-- End Google Tag Manager -->	
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Linkedin certfication</title>
+<meta name="description" content="" />
+<meta name="Keywords" content="" />
+<link rel="shortcut icon" href="//www.talentsprint.com/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="stylesheet" href="{{url_for('static', filename='bootstrap.min.css')}}">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap" rel="stylesheet">
+<link rel="manifest" href="https://www.talentsprint.com/manifest.json">
+<link rel="stylesheet" href="{{url_for('static', filename='style-new.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='responsive.css')}}">
+<style>
+/*
+img.about-pgm-img {
+    height: 470px;
+    margin-top: 20px;
+    width: auto;
+    margin: auto;
+    display: block;
+}*/
+img.certificate {
+    height: 600px;
+    margin-top: 10px;
+    margin: auto
+}  
+.capstong-project ol li {
+    font-size: 16px;
+    line-height: 2;
+}    
+</style>
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4FZMR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) --> 	
+<div class="linkedin">
+  <header class="cd-auto-hide-header">
+    <div class="container">
+    <nav class="navbar navbar-expand-lg justify-content-between"> <a class="navbar-brand" href="https://www.talentsprint.com"><img src="{{url_for('static', filename='logo.png')}}" alt="Talentsprint"></a>
+<!--        <img src="/misc/alumni-profile/images/partner-logo.png" class="partner-logo">-->
+        </nav>
+    </div>
+  </header>
+  <div class="banner_contain">
+    <div class="header-design">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2"> <img src="https://cdn.talentsprint.com/portfolios/profile_images/{{rid}}.png" class=""> </div>
+          <div class="col-md-6">
+            <h1 class="author">{{ data['name'] }}</h1>
+              <p>{{ data['designation'] }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="clearfix"></div>
+        <div class=" partner-section">
+          <div class="col-md-2"></div>
+          <div class="col-md-6">
+            <h3> {{ data['program_name'] }}<br>
+                <span>{{ data['batch_name'] }}</span></h3>
+          </div>
+          <div class="col-md-4"> </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12"><p class="text-center"> <img src="https://cdn.talentsprint.com/portfolios/certificates/{{rid}}.jpg" class="certificate img-responsive"></p> </div>
+      </div>
+    </div>
+  </div>
+  <section class="compelling-deeptech" id="platform">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="heading">My Projects</h2>
+          		{% for i in data['My Projects']%}
+          		<div class="capstong-project">
+          			<h3>{{i}}</h3>
+          			<p class="byline">{{desc_data[i][0]}}</p>
+          			<p class="byline">{{desc_data[i][1]}}</p>
+          			</div>
+          		{%endfor%}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="" id="program">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="heading">About Program</h2>
+          <p class="byline-about">Advanced Certification in AI/ML is a 6 months in-depth and comprehensive program. It enables working professionals from around the world to build AI/ML expertise from India’s top Machine Learning Lab at IIIT Hyderabad. The program is led by collaborative faculty from academia, industry and global bluechip institutions. The unique 5-step learning process of masterclass lectures, hands-on labs, mentorship, hackathons, and workshops ensure fast-track learning.</p>
+          <img src="{{url_for('static', filename='about-program-img.png')}}" class="about-pgm-img"> </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row cpy-txt-row">
+	
+        <div class="col-md-6">
+          <p class="cpy-txt">© 2020 TalentSprint</p>
+        </div>
+		    <div class="col-md-6 social-icons">
+<div class="social-icons-sec">
+<p>Share</p>
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_button_linkedin" href="https://talentsprint.com/pages/wip/ts-website/certificate/"></a>
+	<a class="a2a_button_twitter" href="https://talentsprint.com/pages/wip/ts-website/certificate/"></a>
+<a class="a2a_button_facebook" href="https://talentsprint.com/pages/wip/ts-website/certificate/"></a>
+<a class="a2a_button_email" href="https://talentsprint.com/pages/wip/ts-website/certificate/"></a>
+<a class="a2a_button_whatsapp" href="https://talentsprint.com/pages/wip/ts-website/certificate/"></a>
+
+	<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+				</div></div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END --></div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="{{url_for('static', filename='jquery.min.js')}}"></script> 
+<script src="{{url_for('static', filename='bootstrap.min.js')}}"></script> 
+ 
+<script>
+
+  $(window).scroll(function(e) {
+    // add/remove class to navbar when scrolling to hide/show
+    var scroll = $(window).scrollTop();
+    if (scroll >= 100) {
+        $('.cd-auto-hide-header').addClass("sticky");
+    } else {
+        $('.cd-auto-hide-header').removeClass("sticky");
+    }
+});
+</script>
+</body>
+</html>
+    
+
+</html>
